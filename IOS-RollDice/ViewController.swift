@@ -28,14 +28,8 @@ class ViewController: UIViewController {
 
     @IBAction func rollDice(_ sender: Any) {
         
-        dice_01.image = arrImgs[randomNumber()];
-        
-        dice_02.image = arrImgs[randomNumber()];
-    }
-    
-    func randomNumber() -> Int {
-        
-        return Int.random(in: 0..<5);
+        dice_01.image = arrImgs.randomElement();
+        dice_02.image = arrImgs.randomElement();
     }
 }
 
